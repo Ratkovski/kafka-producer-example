@@ -6,7 +6,6 @@ package com.example.kafka.producer.demo.kafka.producer.controller;/*
 
 import com.example.kafka.producer.demo.kafka.producer.model.User;
 import lombok.RequiredArgsConstructor;
-import org.apache.kafka.clients.producer.Callback;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

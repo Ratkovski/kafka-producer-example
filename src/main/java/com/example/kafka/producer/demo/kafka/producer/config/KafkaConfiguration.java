@@ -7,10 +7,8 @@ package com.example.kafka.producer.demo.kafka.producer.config;/*
 import com.example.kafka.producer.demo.kafka.producer.model.User;
 import lombok.RequiredArgsConstructor;
 import org.apache.kafka.clients.admin.NewTopic;
-import org.apache.kafka.clients.producer.Callback;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
-import org.springframework.boot.autoconfigure.kafka.KafkaProperties;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.kafka.annotation.EnableKafka;
@@ -31,6 +29,7 @@ public class KafkaConfiguration {
   @Bean
   public ProducerFactory<String, User> producerFactory() {
     Map<String, Object> config = new HashMap<>();
+
 
     config.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "127.0.0.1:9092");
     config.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);
